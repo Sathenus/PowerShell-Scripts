@@ -1,6 +1,6 @@
 <#
-Prompts for a username and returns any devices they are set as the primary user for
-Returns the prompt back to the prior location so the script can easily be run again
+Prompts for a username(s) and returns any devices they are set as the primary user for
+Returns the prompt back to the prior location so another script can easily be run
 #>
 Import-Module ConfigurationManager
 $PriorLocation = Get-Location
