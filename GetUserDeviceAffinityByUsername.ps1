@@ -5,6 +5,7 @@ Returns the prompt back to the prior location so the script can easily be run ag
 Import-Module ConfigurationManager
 $PriorLocation = Get-Location
 Set-Location CHQ:
-$UserName = Read-Host "Please enter the username. EX:'corp\testuser1'"
-Get-CMUserDeviceAffinity -UserName $UserName | Select-Object -Property ResourceName
+$UserName = (Read-Host  `
+"Please enter a single username or comma delimited list of usernames. EX: corp\testuser1,corp\sccm_admin").Split(',')
+Get-CMUserDeviceAffinity -UserName $UserName | Select-Object -Property UniqueUserName,ResourceName
 Set-Location $PriorLocation
