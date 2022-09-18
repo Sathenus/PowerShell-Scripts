@@ -1,5 +1,5 @@
 <#
-Prompts for a username(s) and returns any devices they are set as the primary user for
+Prompts for username(s) and returns any devices they are set as the primary user for
 Returns the prompt back to the prior location so another script can easily be run
 #>
 Import-Module ConfigurationManager
